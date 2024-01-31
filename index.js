@@ -44,7 +44,8 @@ app.get("/api/v1/pets/:name", (req, res) => {
   const pet = pets.find((pet) => pet.name === name);
 
   // send the pet as a response
-  res.send(pet);
+  console.log(pet);
+  res.send(req.params);
 });
 
 app.listen(PORT, () => {
